@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeCanvasTest'
+
+include ':app'
