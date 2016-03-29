@@ -13,7 +13,10 @@ import React, {
 
 import Canvas from './Canvas'
 
+const DEFAULT_URL = "http://localhost:3000"
+
 class ReactNativeCanvasTest extends Component {
+
   render() {
     return (
       <View style={styles.container}>
@@ -22,6 +25,7 @@ class ReactNativeCanvasTest extends Component {
             context={{message: 'Hello!'}}
             render={this.renderCanvas}
             style={styles.webView}
+            uri={DEFAULT_URL}
           />
         </View>
       </View>
@@ -42,8 +46,8 @@ const styles = StyleSheet.create({
   },
   webView: {
     backgroundColor: '#ff0000',
-    height: 200,
-    width: 200
+    height: 768/2, // not sure I need to halve these??
+    width: 1366/2
   },
   welcome: {
     fontSize: 20,
